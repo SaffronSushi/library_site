@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="X-UA-Compatible" content="IE=EDGE">
+  <meta name="author" content="Andrew Durkee">
+  <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Home | The City Library</title>
+</head>
+<body>
+  <div class="main-wrap">
+    <header>
+      <!-- Logo -->
+      <div id="branding">
+        <a href="index.html">
+          <i class="fas fa-book-reader fa-3x"></i>
+          <div id="branding-text">
+            <h1>The City Library</h1>
+            <p class="lead">The Salt Lake City Public Library System</p>
+          </div>
+        </a>
+      </div>
+      <!--
+        Nav: Dropdown 
+         - List items have different classes to widescreen version
+         - Dropdown lists are toggled on click
+      -->
+      <nav id="nav-drop">
+        <ul>
+          <li class="nav-drop-item">
+            My Account <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="profile.html">My Card</a></li>
+              <li><a href="holds.html">Holds</a></li>
+              <li><a href="login.html">Sign up / Log in</a></li>
+            </ul>
+          </li>
+          <li class="nav-drop-item">
+            Catalog <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="">Adults</a></li>
+              <li><a href="">Teens</a></li>
+              <li><a href="">Children</a></li>
+            </ul>
+          </li>
+          <li class="nav-drop-item">
+            About <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="">Locations</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Jobs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!--
+        Nav: Widescreen
+         - Dropdown lists are toggled on hover
+      -->
+      <nav id="nav-wide">
+        <ul>
+          <li class="nav-wide-item">
+            My Account <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="profile.html">My Card</a></li>
+              <li><a href="holds.html">Holds</a></li>
+              <li><a href="login.html">Sign up / Log in</a></li>
+            </ul>
+          </li>
+          <li class="nav-wide-item">
+            Catalog <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="">Adults</a></li>
+              <li><a href="">Teens</a></li>
+              <li><a href="">Children</a></li>
+            </ul>
+          </li>
+          <li class="nav-wide-item">
+            About <i class="fas fa-angle-down"></i>
+            <ul>
+              <li><a href="">Locations</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Jobs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" placeholder="Search Catalog">
+        <button id="">Search</button>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

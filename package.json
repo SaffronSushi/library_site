@@ -1,20 +1,23 @@
 {
-  "name": "Library-demo",
+  "name": "library_site",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mockup of a library site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaffronSushi/Library-demo.git"
+    "url": "git+https://github.com/SaffronSushi/library_site.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrew Durkee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SaffronSushi/Library-demo/issues"
+    "url": "https://github.com/SaffronSushi/library_site/issues"
   },
-  "homepage": "https://github.com/SaffronSushi/Library-demo#readme"
+  "homepage": "https://github.com/SaffronSushi/library_site#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
 }

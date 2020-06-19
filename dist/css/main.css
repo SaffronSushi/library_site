@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul {
+  list-style: none;
+  color: #333; }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500; }
+
+.lead {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.main-wrap {
+  max-width: 1030px;
+  padding: 1.5rem;
+  margin: auto; }
+
+header #branding a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap; }
+  header #branding a i {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin-right: 0.5rem;
+    background: #7ba614;
+    color: #fff;
+    border-radius: 5px; }
+  header #branding a .branding-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+header #nav-drop {
+  display: none; }
+
+header #nav-wide {
+  padding: 1rem 0; }
+  header #nav-wide .nav-wide-item {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background: #7ba614;
+    color: #fff;
+    border-radius: 5px; }
+    header #nav-wide .nav-wide-item ul {
+      display: none; }
+    header #nav-wide .nav-wide-item:hover {
+      cursor: pointer;
+      background: #ddd;
+      color: #333;
+      border-radius: 5px 5px 0 0; }
+      header #nav-wide .nav-wide-item:hover ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 170px;
+        margin-top: 0.75rem;
+        background: #ddd;
+        border-radius: 0 5px 5px 5px; }
+        header #nav-wide .nav-wide-item:hover ul li {
+          display: block;
+          padding: 0.5rem; }
+          header #nav-wide .nav-wide-item:hover ul li a {
+            padding: 0.5rem; }
+          header #nav-wide .nav-wide-item:hover ul li:hover {
+            background: #7ba614; }
+            header #nav-wide .nav-wide-item:hover ul li:hover a {
+              color: #fff; }

@@ -1,0 +1,138 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.5;
+  color: $dark-color;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+  color: $dark-color;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.lead {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-wrap {
+  max-width: $website-width;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+header {
+  // Branding / Logo
+  // Note: Shrink h1 & .lead size on mobile
+  #branding {
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      i {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .branding-text {        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  // Navbars
+  #nav {
+    // Nav: Dropdown / Mobile
+    &-drop {
+      display: none;
+    }
+
+    // Nav: Widescreen
+    &-wide {
+      padding: 1rem 0;
+
+      // Dropdown list item
+      .nav-wide-item {
+        position: relative;
+        display: inline-block;
+        padding: 0.75rem 1rem;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 5px;
+        
+        // Hide nested ul by default
+        ul {
+          display: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: #ddd;
+          color: $dark-color;
+          border-radius: 5px 5px 0 0;
+
+          // Nested dropdown show
+          ul {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 170px;
+            margin-top: 0.75rem;
+            background: #ddd;
+            border-radius: 0 5px 5px 5px;
+
+            li {
+              display: block;
+              padding: 0.5rem;
+
+              a {
+                padding: 0.5rem;
+              }
+
+              &:hover {
+                background: $primary-color;
+                a { color: #fff; }
+              }
+            }
+          }
+        }
+      }
+            
+      // Header search bar
+      .header-search {
+
+      }
+    }
+  }
+}
