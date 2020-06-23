@@ -27,3 +27,16 @@
 
   }
 }
+
+// Text
+.section-title {
+  font-size: 2.75rem;
+  color: $secondary-color;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dark-color;
+}

@@ -14,7 +14,7 @@ body {
 }
 
 img {
-  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -30,12 +30,6 @@ ul {
 h1 {
   font-size: 3rem;
   font-weight: 500;
-}
-
-.lead {
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .main-wrap {
@@ -110,7 +104,7 @@ header {
 
         &:hover {
           cursor: pointer;
-          background: #ddd;
+          background: #ccc;
           color: $dark-color;
           border-radius: 5px 5px 0 0;
 
@@ -121,8 +115,9 @@ header {
             left: 0;
             width: 170px;
             margin-top: 0.75rem;
-            background: #ddd;
+            background: #ccc;
             border-radius: 0 5px 5px 5px;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 
             li {
               display: block;
@@ -146,11 +141,17 @@ header {
         margin: 0.5rem 0;
 
         input {
-          height: 2rem;
+          font-size: 1.25rem;
+          height: 2.3rem;
           width: 13rem;
-          padding-left: 5px;
+          padding-left: 8px;
           border: 1px solid $dark-color;
           border-radius: 3px;
+        }
+
+        .btn {
+          height: 2.5rem;
+          width: 2.5rem;
         }
       }
     }
@@ -160,7 +161,9 @@ header {
 // HOME PAGE
 
 section#home {
+  // Section: Showcase
   &-showcase {
+    // Image billboard
     #billboard {
       margin: 1rem 0;
 
@@ -171,6 +174,7 @@ section#home {
         background: green;
       }
 
+      // Billboard buttons
       #bb-btns {
         display: flex;
         flex-direction: row;
@@ -194,6 +198,145 @@ section#home {
           }
         }
       }
+    }
+  }
+
+  // Section: Events
+  &-events {
+    .events-wrap {
+      margin: 1rem 2rem;
+
+      div {
+        margin: 1.5rem 0;
+        padding: 1rem 2rem;
+        background: $light-color;
+        border: 1px solid $medium-color;
+
+        h3 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+        }
+
+        p.event-date {
+          margin-top: 1rem;
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Section: Features
+  &-featured {
+    margin-top: 3rem;
+
+    // Show different book lists based on selected age group
+    .featured-wrap {
+      margin: 2rem 0;
+      padding: 2rem 0;
+      background: $light-color;
+      border-radius: 10px;
+
+      .category-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        button {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          margin: 0 1rem;
+          width: 150px;
+          height: 50px;
+
+          &#featured-kids-btn {
+            background: #5e88aa;
+            
+            &.current {
+              background: #fff;
+              color: #5e88aa;
+              border: 2px solid #5e88aa;
+            }
+          }
+
+          &#featured-teens-btn {
+            background: #47855e;
+            
+            &.current {
+              background: #fff;
+              color: #47855e;
+              border: 2px solid #47855e;
+            }
+          }
+
+          &#featured-adults-btn {
+            background: #b34d4d;
+            
+            &.current {
+              background: #fff;
+              color: #b34d4d;
+              border: 2px solid #b34d4d;
+            }
+          }
+        }
+      }
+
+      .featured-list {
+        display: none;
+  
+        &.current {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-self: center;
+  
+          li {
+            margin: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// FOOTER
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  background: $secondary-color;
+  color: #fff;
+
+  #social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem ;
+    
+    li {
+      margin: 0 2.5rem;
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  #contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    div {
+      text-align: center;
+      margin: 0 2rem;
+      text-transform: uppercase;
+      
+      p { color: #fff; }
     }
   }
 }

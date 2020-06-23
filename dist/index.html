@@ -1,3 +1,6 @@
+<!-- Add img source for book covers? -->
+<!-- Be mindful of image sizes; only use the smallest necessary -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,6 +102,7 @@
       </nav>
     </header>
 
+    <!-- Section: Showcase -->
     <section id="home-showcase">
       <div id="billboard">
         <div id="bb-img-wrap">
@@ -115,6 +119,145 @@
       </div>
     </section>
 
+    <!-- Section: Events -->
+    <section id="home-events">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-wrap">
+        <div>
+          <h3>Movie Night</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
+          <p class="lead event-date">January 12, 2020</p>
+        </div>
+        <div>
+          <h3>Evening Storytime</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
+          <p class="lead event-date">Febuary 3, 2020</p>
+        </div>
+        <div>
+          <h3>Book Sale</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
+          <p class="lead event-date">Febuary 30, 2020</p>
+        </div>
+        <div>
+          <h3>Online Book Club</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
+          <p class="lead event-date">March 24, 2020</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Featured -->
+    <section id="home-featured">
+      <h3 class="section-title">Featured</h3>
+      <p class="lead">See this week's recommended books</p>
+      <div class="featured-wrap">
+        <ul class="category-buttons">
+          <li><button id="featured-kids-btn" class="btn btn-primary">Kids</button></li>
+          <li><button id="featured-teens-btn" class="btn btn-primary">Teens</button></li>
+          <li><button id="featured-adults-btn" class="btn btn-primary current">Adults</button></li>
+        </ul>
+        <!-- Different book lists based on different age ranges -->
+        <!-- Kids -->
+        <ul class="featured-list featured-kids">
+          <li><a href="">
+            <img
+              src="img/book_covers/kids/harry_potter.jpg"
+              alt="Harry Potter and the Sorcerer's Stone"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href="">
+            <img
+              src="img/book_covers/kids/holes.jpg"
+              alt="Holes"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href=""></a>
+            <img
+              src="img/book_covers/kids/last_kids.jpg"
+              alt="The Last kids On Earth"
+              width="200" height="300"
+            >
+          </a></li>
+        </ul>
+        <!-- Teens -->
+        <ul class="featured-list featured-teens">
+          <li><a href="">
+            <img
+              src="img/book_covers/teens/little_fires.jpg"
+              alt="Little Fires"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href="">
+            <img
+              src="img/book_covers/teens/love_and_gelato.jpg"
+              alt="Love And Gelato"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href=""></a>
+            <img
+              src="img/book_covers/teens/the_truth.jpg"
+              alt="The Truth"
+              width="200" height="300"
+            >
+          </a></li>
+        </ul>
+        <!-- Adults -->
+        <ul class="featured-list featured-adults current">
+          <li><a href="">
+            <img
+              src="img/book_covers/adults/no_country.jpg"
+              alt="No Country For Old Men"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href="">
+            <img
+              src="img/book_covers/adults/the_moral_landscape.jpg"
+              alt="The Moral Landscape"
+              width="200" height="300"
+            >
+          </a></li>
+          <li><a href=""></a>
+            <img
+              src="img/book_covers/adults/who_owns_the_future.jpg"
+              alt="Who Owns The Future"
+              width="200" height="300"
+            >
+          </a></li>
+        </ul>
+      </div>
+    </section>
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <ul id="social-media">
+        <li><a href="https://www.facebook.com/">
+          <i class="fab fa-facebook fa-3x"></i>
+        </a></li>
+        <li><a href="https://www.twitter.com/">
+          <i class="fab fa-twitter fa-3x"></i>
+        </a></li>
+        <li><a href="https://www.instagram.com/">
+          <i class="fab fa-instagram fa-3x"></i>
+        </a></li>
+      </ul>
+      <div id="contact-info">
+        <div>
+          <h3>Customer Service</h3>
+          <p class="lead">(555) 555-5555</p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p class="lead">Weekdays, 9 am - 8pm</p>
+          <p class="lead">Weekends, 11 am - 7pm</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
