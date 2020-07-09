@@ -76,11 +76,48 @@ header #branding a {
     flex-direction: column;
     align-items: center; }
 
-header #nav-drop {
-  display: none; }
+header #nav-drop ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%; }
+  header #nav-drop ul .nav-drop-item {
+    display: block;
+    padding: 0.75rem 0;
+    margin: 0.25rem 0;
+    text-align: center;
+    width: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #aaa; }
+    header #nav-drop ul .nav-drop-item:last-child {
+      border: none; }
+    header #nav-drop ul .nav-drop-item ul {
+      display: none !important; }
+    header #nav-drop ul .nav-drop-item:hover {
+      cursor: pointer;
+      background: #7ba614;
+      color: #fff;
+      border-radius: 10px; }
+      header #nav-drop ul .nav-drop-item:hover ul {
+        display: block !important; }
+        header #nav-drop ul .nav-drop-item:hover ul li {
+          display: block;
+          padding: 0.5rem 0;
+          border-bottom: 1px dotted #fff; }
+          header #nav-drop ul .nav-drop-item:hover ul li a {
+            color: #fff; }
+          header #nav-drop ul .nav-drop-item:hover ul li:last-child {
+            border: none; }
+          header #nav-drop ul .nav-drop-item:hover ul li:hover {
+            background: #fff; }
+            header #nav-drop ul .nav-drop-item:hover ul li:hover a {
+              color: #333; }
 
 header #nav-wide {
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -149,8 +186,8 @@ section#home-showcase #billboard {
     list-style: none; }
     section#home-showcase #billboard #bb-btns .bb-btn {
       display: inline-block;
-      width: 25px;
-      height: 10px;
+      width: 30px;
+      height: 12px;
       margin: 0 0.5rem;
       border: none;
       border-radius: 3px;
@@ -158,6 +195,8 @@ section#home-showcase #billboard {
       section#home-showcase #billboard #bb-btns .bb-btn-current {
         background: #fff;
         border: 1px solid #333; }
+      section#home-showcase #billboard #bb-btns .bb-btn:focus {
+        outline: none; }
 
 section#home-events .events-wrap {
   margin: 1rem 2rem; }

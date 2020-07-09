@@ -17,7 +17,8 @@
     "url": "https://github.com/SaffronSushi/library_site/issues"
   },
   "homepage": "https://github.com/SaffronSushi/library_site#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "node-sass": "^4.14.1"
   }
 }

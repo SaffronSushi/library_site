@@ -9,6 +9,7 @@
   <meta name="X-UA-Compatible" content="IE=EDGE">
   <meta name="author" content="Andrew Durkee">
   <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
+  <script src="js/main.js" async defer></script>
   <link rel="stylesheet" href="css/main.css">
   <title>Home | The City Library</title>
 </head>
@@ -29,30 +30,31 @@
         Nav: Dropdown 
          - List items have different classes to widescreen version
          - Dropdown lists are toggled on click
+         - List items have IDs (unlike widescreen versions)
       -->
       <nav id="nav-drop">
         <ul>
-          <li class="nav-drop-item">
-            My Account <i class="fas fa-angle-down"></i>
-            <ul>
+          <li id="nav-account-li" class="nav-drop-item">
+            My Account
+            <ul id="nav-account-ul">
               <li><a href="search.html">Search</a></li>
               <li><a href="profile.html">My Card</a></li>
               <li><a href="holds.html">Holds</a></li>
               <li><a href="login.html">Sign up / Log in</a></li>
             </ul>
           </li>
-          <li class="nav-drop-item">
-            Catalog <i class="fas fa-angle-down"></i>
-            <ul>
+          <li id="nav-catalog-li" class="nav-drop-item">
+            Catalog
+            <ul id="nav-catalog-ul">
               <li><a href="search.html">Search</a></li>
               <li><a href="">Adults</a></li>
               <li><a href="">Teens</a></li>
               <li><a href="">Children</a></li>
             </ul>
           </li>
-          <li class="nav-drop-item">
-            About <i class="fas fa-angle-down"></i>
-            <ul>
+          <li id="nav-about-li" class="nav-drop-item">
+            About
+            <ul id="nav-about-ul">
               <li><a href="">Locations</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">Jobs</a></li>
@@ -107,14 +109,17 @@
       <div id="billboard">
         <div id="bb-img-wrap">
           <ul id="bb-imgs">
-            <li><img class="first-img" src="" alt=""></li>
+            <li><img id="first-img" class="bb-img-current" src="" alt=""></li>
+            <li><img id="second-img" src="" alt=""></li>
+            <li><img id="third-img" src="" alt=""></li>
+            <li><img id="fourth-img" src="" alt=""></li>
           </ul>
         </div>
         <ul id="bb-btns">
-          <li><button id="first-btn" class="bb-btn bb-btn-current"></button></li>
-          <li><button id="second-btn" class="bb-btn"></button></li>
-          <li><button id="third-btn" class="bb-btn"></button></li>
-          <li><button id="fourth-btn" class="bb-btn" class="bb-btn"></button></li>
+          <li><button id="bb-first-btn" class="bb-btn bb-btn-current"></button></li>
+          <li><button id="bb-second-btn" class="bb-btn"></button></li>
+          <li><button id="bb-third-btn" class="bb-btn"></button></li>
+          <li><button id="bb-fourth-btn" class="bb-btn" class="bb-btn"></button></li>
         </ul>
       </div>
     </section>
@@ -158,7 +163,7 @@
         </ul>
         <!-- Different book lists based on different age ranges -->
         <!-- Kids -->
-        <ul class="featured-list featured-kids">
+        <ul id="featured-kids" class="featured-list">
           <li><a href="">
             <img
               src="img/book_covers/kids/harry_potter.jpg"
@@ -182,7 +187,7 @@
           </a></li>
         </ul>
         <!-- Teens -->
-        <ul class="featured-list featured-teens">
+        <ul id="featured-teens" class="featured-list">
           <li><a href="">
             <img
               src="img/book_covers/teens/little_fires.jpg"
@@ -206,7 +211,7 @@
           </a></li>
         </ul>
         <!-- Adults -->
-        <ul class="featured-list featured-adults current">
+        <ul id="featured-adults" class="featured-list current">
           <li><a href="">
             <img
               src="img/book_covers/adults/no_country.jpg"
