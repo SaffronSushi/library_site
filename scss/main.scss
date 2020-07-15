@@ -105,26 +105,31 @@ header {
           background: $primary-color;
           color: #fff;
           border-radius: 10px;
-        
-          // Nested dropdown show
-          // "nav-show" class is assigned on button click
-          ul {
-            display: block !important;
-              
-            li {
-              display: block;
-              padding: 0.5rem 0;
-              border-bottom: 1px dotted #fff;
-              a { color: #fff; }
+        }
+      }
+      .nav-drop-item.nav-current {
+        background: $primary-color;
+        color: #fff;
+        border-radius: 10px;
+      
+        // Nested dropdown show
+        // "nav-show" class is assigned on button click
+        ul {
+          display: block !important;
+            
+          li {
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted #fff;
+            a { color: #fff; }
 
-              &:last-child {
-                border: none;
-              }
+            &:last-child {
+              border: none;
+            }
 
-              &:hover {
-                background: #fff;
-                a { color: $dark-color; }
-              }
+            &:hover {
+              background: #fff;
+              a { color: $dark-color; }
             }
           }
         }

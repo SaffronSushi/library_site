@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" async defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Test Library Site</title>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <!-- Header -->
+      <!-- 
+        NOTES:
+         - Have 1 navbar, and change properties based on med-queries
+       -->
+      <header id="header">
+        <!-- Logo -->
+        <a id="header-logo" href="index.html">
+          <i class="fas fa-book-reader fa-3x"></i>
+          <div id="header-logo-text">
+            <h1>City Library</h1>
+            <p class="lead">Public Library System</p>
+          </div>
+        </a>
+        <!-- Search bar -->
+        <div id="header-search">
+          <input type="text" placeholder="Search catalog">
+          <button type="submit">
+            <i class="fas fa-search fa-2x"></i>
+          </button>
+        </div>
+        <!-- Navbar -->
+        <nav id="header-nav">
+          <ul>
+            <li id="nav-account" class="nav-drop-item">
+              <h3>My Account</h3>
+              <ul id="nav-account-ul">
+                <li><a href="verify.html">My Card</a></li>
+                <li><a href="verify.html">Holds</a></li>
+                <li><a href="login.html">Sign up / Log in</a></li>
+              </ul>
+            </li>
+            <li id="nav-catalog" class="nav-drop-item">
+              <h3>Catalog</h3>
+              <ul id="nav-catalog-ul">
+                <li><a href="search.html">Search</a></li>
+                <li><a href="">Adults</a></li>
+                <li><a href="">Teens</a></li>
+                <li><a href="">Children</a></li>
+              </ul>
+            </li>
+            <li id="nav-about" class="nav-drop-item">
+              <h3>About</h3>
+              <ul id="nav-about-ul">
+                <li><a href="">Locations</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Jobs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+
+
+      <!-- Footer -->
+      <footer id="footer">
+        <!-- Social media -->
+        <ul id="footer-media">
+          <li><a href=""><i class="fab fa-facebook fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-youtube fa-3x"></i></a></li>
+        </ul>
+        <!-- Info -->
+        <ul id="footer-info">
+          <li><a href="">Hours and Location</a></li>
+          <li><a href="">Catalog</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+        <!-- Copyright -->
+        <p id="footer-copy">&copy; City Library 2020. All rights reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

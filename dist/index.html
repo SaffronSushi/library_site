@@ -1,268 +1,289 @@
-<!-- Add img source for book covers? -->
-<!-- Be mindful of image sizes; only use the smallest necessary -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="X-UA-Compatible" content="IE=EDGE">
-  <meta name="author" content="Andrew Durkee">
-  <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
-  <script src="js/main.js" async defer></script>
-  <link rel="stylesheet" href="css/main.css">
-  <title>Home | The City Library</title>
-</head>
-<body>
-  <div class="main-wrap">
-    <header>
-      <!-- Logo -->
-      <div id="branding">
-        <a href="index.html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0dc85c6626.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" async defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Test Library Site</title>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <!-- Header -->
+      <!-- 
+        NOTES:
+         - Have 1 navbar, and change properties based on med-queries
+       -->
+      <header id="header">
+        <!-- Logo -->
+        <a id="header-logo" href="index.html">
           <i class="fas fa-book-reader fa-3x"></i>
-          <div id="branding-text">
-            <h1>The City Library</h1>
-            <p class="lead">The Salt Lake City Public Library System</p>
+          <div id="header-logo-text">
+            <h1>City Library</h1>
+            <p class="lead">Public Library System</p>
           </div>
         </a>
-      </div>
-      <!--
-        Nav: Dropdown 
-         - List items have different classes to widescreen version
-         - Dropdown lists are toggled on click
-         - List items have IDs (unlike widescreen versions)
-      -->
-      <nav id="nav-drop">
-        <ul>
-          <li id="nav-account-li" class="nav-drop-item">
-            My Account
-            <ul id="nav-account-ul">
-              <li><a href="search.html">Search</a></li>
-              <li><a href="profile.html">My Card</a></li>
-              <li><a href="holds.html">Holds</a></li>
-              <li><a href="login.html">Sign up / Log in</a></li>
-            </ul>
-          </li>
-          <li id="nav-catalog-li" class="nav-drop-item">
-            Catalog
-            <ul id="nav-catalog-ul">
-              <li><a href="search.html">Search</a></li>
-              <li><a href="">Adults</a></li>
-              <li><a href="">Teens</a></li>
-              <li><a href="">Children</a></li>
-            </ul>
-          </li>
-          <li id="nav-about-li" class="nav-drop-item">
-            About
-            <ul id="nav-about-ul">
-              <li><a href="">Locations</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Jobs</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!--
-        Nav: Widescreen
-         - Dropdown lists are toggled on hover
-      -->
-      <nav id="nav-wide">
-        <ul>
-          <li class="nav-wide-item">
-            My Account <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="search.html">Search</a></li>
-              <li><a href="profile.html">My Card</a></li>
-              <li><a href="holds.html">Holds</a></li>
-              <li><a href="login.html">Sign up / Log in</a></li>
-            </ul>
-          </li>
-          <li class="nav-wide-item">
-            Catalog <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="search.html">Search</a></li>
-              <li><a href="">Adults</a></li>
-              <li><a href="">Teens</a></li>
-              <li><a href="">Children</a></li>
-            </ul>
-          </li>
-          <li class="nav-wide-item">
-            About <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="">Locations</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Jobs</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="nav-wide-search">
-          <input type="text" placeholder="Search Catalog">
-          <button id="" class="btn btn-primary">
-            <i class="fas fa-search"></i>
+        <!-- Search bar -->
+        <div id="header-search">
+          <input type="text" placeholder="Search catalog">
+          <button type="submit">
+            <i class="fas fa-search fa-2x"></i>
           </button>
         </div>
-      </nav>
-    </header>
+        <!-- Navbar -->
+        <nav id="header-nav">
+          <ul>
+            <li id="nav-account" class="nav-drop-item">
+              <h3>My Account</h3>
+              <ul id="nav-account-ul">
+                <li><a href="verify.html">My Card</a></li>
+                <li><a href="verify.html">Holds</a></li>
+                <li><a href="login.html">Sign up / Log in</a></li>
+              </ul>
+            </li>
+            <li id="nav-catalog" class="nav-drop-item">
+              <h3>Catalog</h3>
+              <ul id="nav-catalog-ul">
+                <li><a href="search.html">Search</a></li>
+                <li><a href="">Adults</a></li>
+                <li><a href="">Teens</a></li>
+                <li><a href="">Children</a></li>
+              </ul>
+            </li>
+            <li id="nav-about" class="nav-drop-item">
+              <h3>About</h3>
+              <ul id="nav-about-ul">
+                <li><a href="">Locations</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Jobs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- Section: Showcase -->
-    <section id="home-showcase">
-      <div id="billboard">
-        <div id="bb-img-wrap">
+      <!-- Section A: Showcase -->
+      <section id="home-a">
+        <!-- Animated billboard (bb=billboard) -->
+        <!-- 
+          NOTES:
+           - Have all imgs link to a single demo "article.html" page
+           - Specify default width and height
+           - In JS, create obj w/ correspongding btn&img as key/value pairs
+         -->
+        <div id="bb">
+          <!-- Billboard images -->
           <ul id="bb-imgs">
-            <li><img id="first-img" class="bb-img-current" src="" alt=""></li>
-            <li><img id="second-img" src="" alt=""></li>
-            <li><img id="third-img" src="" alt=""></li>
-            <li><img id="fourth-img" src="" alt=""></li>
+            <li>
+              <a href="">
+              <img id="bb-img-1" class="bb-img bb-img-current"
+                    src="img/billboard/medium/img_1_x1280.jpg" alt=""
+                    width="" height="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+              <img id="bb-img-2" class="bb-img"
+                    src="img/billboard/medium/img_2_x1280.jpg" alt=""
+                    width="" height="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+              <img id="bb-img-3" class="bb-img"
+                    src="img/billboard/medium/img_3_x1280.jpg" alt=""
+                    width="" height="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+              <img id="bb-img-4" class="bb-img"
+                    src="img/billboard/medium/img_4_x1280.jpg" alt=""
+                    width="" height="">
+              </a>
+            </li>
+          </ul>
+          <!-- Billboard buttons -->
+          <ul id="bb-btns">
+            <li>
+              <button id="bb-btn-1" class="bb-btn bb-btn-current"></button>
+            </li>
+            <li>
+              <button id="bb-btn-2" class="bb-btn"></button>
+            </li>
+            <li>
+              <button id="bb-btn-3" class="bb-btn"></button>
+            </li>
+            <li>
+              <button id="bb-btn-4" class="bb-btn"></button>
+            </li>
           </ul>
         </div>
-        <ul id="bb-btns">
-          <li><button id="bb-first-btn" class="bb-btn bb-btn-current"></button></li>
-          <li><button id="bb-second-btn" class="bb-btn"></button></li>
-          <li><button id="bb-third-btn" class="bb-btn"></button></li>
-          <li><button id="bb-fourth-btn" class="bb-btn" class="bb-btn"></button></li>
+      </section>
+      
+      <!-- Section B: Events -->
+      <section id="home-b">
+        <h2 class="section-title">Upcoming Events</h2>
+        <!-- Events -->
+        <ul id="events">
+          <li>
+            <h3>Movie Night</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
+            <p>January 12, 2020</p>
+          </li>
+          <li>
+            <h3>Evening Storytime</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit numquam nemo maxime vel possimus esse eos doloremque ullam beatae, quidem perspiciatis ex aspernatur id consequuntur sed ratione sunt fuga? Cumque?</p>
+            <p>Febuary 3, 2020</p>
+          </li>
+          <li>
+            <h3>Online Book Club</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta deserunt ratione omnis perspiciatis commodi, et nesciunt iusto laudantium minus deleniti possimus accusantium culpa atque dolores.</p>
+            <p>March 24, 2020</p>
+          </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section: Events -->
-    <section id="home-events">
-      <h2 class="section-title">Upcoming Events</h2>
-      <div class="events-wrap">
-        <div>
-          <h3>Movie Night</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
-          <p class="lead event-date">January 12, 2020</p>
+      <!-- Section C: Featured Books -->
+      <section id="home-c">
+        <h2 class="section-title">Featured Titles</h2>
+        <!-- Featured -->
+        <!-- 
+          NOTES:
+           - Like the billboard, have obj for btn/li combos
+         -->
+        <div id="feat">
+          <!-- Featured category buttons -->
+          <ul id="feat-btns">
+            <li>
+              <button id="feat-btn-kids" class="feat-btn feat-btn-current">
+                Kids
+              </button>
+            </li>
+            <li>
+              <button id="feat-btn-teens" class="feat-btn">
+                Teens
+              </button>
+            </li>
+            <li>
+              <button id="feat-btn-adults" class="feat-btn">
+                Adults
+              </button>
+            </li>
+          </ul>
+          <!-- Featured cagegory lists -->
+          <!-- Kids -->
+          <ul id="feat-kids" class="feat-ul feat-ul-current">
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/kids/harry_potter.jpg"
+                alt="Harry Potter and the Sorcerer's Stone"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/kids/holes.jpg"
+                alt="Holes"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/kids/last_kids.jpg"
+                alt="The Last kids On Earth"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+          </ul>
+          <!-- Teens -->
+          <ul id="feat-teens" class="feat-ul">
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/teens/little_fires.jpg"
+                alt="Little Fires"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/teens/love_and_gelato.jpg"
+                alt="Love And Gelato"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/teens/the_truth.jpg"
+                alt="The Truth"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+          </ul>
+          <!-- Adults -->
+          <ul id="feat-adults" class="feat-ul">
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/adults/no_country.jpg"
+                alt="No Country For Old Men"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/adults/the_moral_landscape.jpg"
+                alt="The Moral Landscape"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                src="img/book_covers/adults/who_owns_the_future.jpg"
+                alt="Who Owns The Future"
+                width="200" height="300"
+                >
+              </a>
+            </li>
+          </ul>
         </div>
-        <div>
-          <h3>Evening Storytime</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
-          <p class="lead event-date">Febuary 3, 2020</p>
-        </div>
-        <div>
-          <h3>Book Sale</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
-          <p class="lead event-date">Febuary 30, 2020</p>
-        </div>
-        <div>
-          <h3>Online Book Club</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi accusantium atque consequatur tempora reprehenderit doloremque similique tempore in ea!</p>
-          <p class="lead event-date">March 24, 2020</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section: Featured -->
-    <section id="home-featured">
-      <h3 class="section-title">Featured</h3>
-      <p class="lead">See this week's recommended books</p>
-      <div class="featured-wrap">
-        <ul class="category-buttons">
-          <li><button id="featured-kids-btn" class="btn btn-primary">Kids</button></li>
-          <li><button id="featured-teens-btn" class="btn btn-primary">Teens</button></li>
-          <li><button id="featured-adults-btn" class="btn btn-primary current">Adults</button></li>
+      <!-- Footer -->
+      <footer id="footer">
+        <!-- Social media -->
+        <ul id="footer-media">
+          <li><a href=""><i class="fab fa-facebook fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram fa-3x"></i></a></li>
+          <li><a href=""><i class="fab fa-youtube fa-3x"></i></a></li>
         </ul>
-        <!-- Different book lists based on different age ranges -->
-        <!-- Kids -->
-        <ul id="featured-kids" class="featured-list">
-          <li><a href="">
-            <img
-              src="img/book_covers/kids/harry_potter.jpg"
-              alt="Harry Potter and the Sorcerer's Stone"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href="">
-            <img
-              src="img/book_covers/kids/holes.jpg"
-              alt="Holes"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href=""></a>
-            <img
-              src="img/book_covers/kids/last_kids.jpg"
-              alt="The Last kids On Earth"
-              width="200" height="300"
-            >
-          </a></li>
+        <!-- Info -->
+        <ul id="footer-info">
+          <li><a href="">Hours and Location</a></li>
+          <li><a href="">Catalog</a></li>
+          <li><a href="">Contact Us</a></li>
         </ul>
-        <!-- Teens -->
-        <ul id="featured-teens" class="featured-list">
-          <li><a href="">
-            <img
-              src="img/book_covers/teens/little_fires.jpg"
-              alt="Little Fires"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href="">
-            <img
-              src="img/book_covers/teens/love_and_gelato.jpg"
-              alt="Love And Gelato"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href=""></a>
-            <img
-              src="img/book_covers/teens/the_truth.jpg"
-              alt="The Truth"
-              width="200" height="300"
-            >
-          </a></li>
-        </ul>
-        <!-- Adults -->
-        <ul id="featured-adults" class="featured-list current">
-          <li><a href="">
-            <img
-              src="img/book_covers/adults/no_country.jpg"
-              alt="No Country For Old Men"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href="">
-            <img
-              src="img/book_covers/adults/the_moral_landscape.jpg"
-              alt="The Moral Landscape"
-              width="200" height="300"
-            >
-          </a></li>
-          <li><a href=""></a>
-            <img
-              src="img/book_covers/adults/who_owns_the_future.jpg"
-              alt="Who Owns The Future"
-              width="200" height="300"
-            >
-          </a></li>
-        </ul>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <div class="footer-content">
-      <ul id="social-media">
-        <li><a href="https://www.facebook.com/">
-          <i class="fab fa-facebook fa-3x"></i>
-        </a></li>
-        <li><a href="https://www.twitter.com/">
-          <i class="fab fa-twitter fa-3x"></i>
-        </a></li>
-        <li><a href="https://www.instagram.com/">
-          <i class="fab fa-instagram fa-3x"></i>
-        </a></li>
-      </ul>
-      <div id="contact-info">
-        <div>
-          <h3>Customer Service</h3>
-          <p class="lead">(555) 555-5555</p>
-        </div>
-        <div>
-          <h3>Hours</h3>
-          <p class="lead">Weekdays, 9 am - 8pm</p>
-          <p class="lead">Weekends, 11 am - 7pm</p>
-        </div>
-      </div>
+        <!-- Copyright -->
+        <p id="footer-copy">&copy; City Library 2020. All rights reserved</p>
+      </footer>
     </div>
-  </footer>
-</body>
+  </body>
 </html>

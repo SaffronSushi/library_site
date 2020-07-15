@@ -1,86 +1,104 @@
-// When getting books from database, turn them each into objects
+// ASSIGN VARS
 
-// Mobile/dropdown nav list items
-const navAccount = document.getElementById('nav-account-li');
-const navCatalog = document.getElementById('nav-catalog-li');
-const navAbout = document.getElementById('nav-about-li');
-const dropElements = [navAccount, navCatalog, navAbout];
+// Navbar elements
+const navAccountItem = document.getElementById('nav-account');
+const navCatalogItem = document.getElementById('nav-catalog');
+const navAboutItem = document.getElementById('nav-about');
+const navItems = [navAccountItem, navCatalogItem, navAboutItem];
+const navAccountUl = document.getElementById('nav-account-ul');
+const navCatalogUl = document.getElementById('nav-catalog-ul');
+const navAboutUl = document.getElementById('nav-about-ul');
+const navUls = [navAccountUl, navCatalogUl, navAboutUl];
 
-// Billboard images
-const img1 = document.getElementById('first-img');
-const img2 = document.getElementById('second-img');
-const img3 = document.getElementById('third-img');
-const img4 = document.getElementById('fourth-img');
-const bbImgs = [img1, img2, img3, img4];
-// Billboard buttons
-const bbBtn1 = document.getElementById('bb-first-btn');
-const bbBtn2 = document.getElementById('bb-second-btn');
-const bbBtn3 = document.getElementById('bb-third-btn');
-const bbBtn4 = document.getElementById('bb-fourth-btn');
+// Billboard elements
+const bbBtn1 = document.getElementById('bb-btn-1');
+const bbBtn2 = document.getElementById('bb-btn-2');
+const bbBtn3 = document.getElementById('bb-btn-3');
+const bbBtn4 = document.getElementById('bb-btn-4');
 const bbBtns = [bbBtn1, bbBtn2, bbBtn3, bbBtn4];
+const bbImg1 = document.getElementById('bb-img-1');
+const bbImg2 = document.getElementById('bb-img-2');
+const bbImg3 = document.getElementById('bb-img-3');
+const bbImg4 = document.getElementById('bb-img-4');
+const bbImgs = [bbImg1, bbImg2, bbImg3, bbImg4];
 
-// Featured book buttons
-const featKidsBtn = document.getElementById('featured-kids-btn');
-const featTeensBtn = document.getElementById('featured-teens-btn');
-const featAdultsBtn = document.getElementById('featured-adults-btn');
+// Featured books elements
+const featKidsUl = document.getElementById('feat-kids');
+const featTeensUl = document.getElementById('feat-teens');
+const featAdultsUl = document.getElementById('feat-adults');
+const featUls = [featKidsUl, featTeensUl, featAdultsUl];
+const featKidsBtn = document.getElementById('feat-btn-kids');
+const featTeensBtn = document.getElementById('feat-btn-teens');
+const featAdultsBtn = document.getElementById('feat-btn-adults');
 const featBtns = [featKidsBtn, featTeensBtn, featAdultsBtn];
-// Featured book lists
-const featKidsLi = document.getElementById('featured-kids');
-const featTeensLi = document.getElementById('featured-teens');
-const featAdultsLi = document.getElementById('featured-adults');
-const featLi = [featKidsLi, featTeensLi, featAdultsLi];
+
+// Login status
+let loggedIn = false;
+
+// MAIN FUNCTIONS
+// 
+// 
 
 // EVENT LISTENERS
 
-// Mobile/Dropdown elements
+// Navbar / Dropdown menu toggle
+navItems.forEach(item =>
+{
+  item.addEventListener('click', () =>
+  {
+    // Get current ul
+    let currentUl = document.querySelector('.nav-current');
 
-// NOTE: Currently done using the :hover property in css
-//       May want to change to button input for more intuitive UI
-
-// dropElements.forEach( element => {
-//   // Show/hide dropdown item on click
-//   element.onclick = () => {
-//     // Remove class name from all nav items
-//     for(let i=0; i<dropElements.length; i++) {
-//       element.classList.remove('nav-show');
-//     }
-//     // Add 'nav-show' class name to element
-//     element.classList.add('nav-show');
-//   }
-// });
-
-// Billboard imgs/btns
-bbBtns.forEach(button => {
-  // On button click show corresponding image
-  button.onclick = () => {
-    let index ;
-
-    // Remove 'bb-btn-current' & 'bb-img-current' class names from all buttons/images
-    for(let i=0; i<bbBtns.length; i++) {
-      bbBtns[i].classList.remove('bb-btn-current');
-      bbImgs[i].classList.remove('bb-img-current');
-    };
-
-    // Add class name to corresponding button and img
-    button.classList.add('bb-btn-current');
-    bbImgs[indexof(button)].classList.add('bb-img-current');
-  }
-});
-
-// Featured buttons
-featBtns.forEach(button => {
-  // On button click show corresponding list
-  button.onclick = () => {
-    let index;
-
-    // Remove 'current' class name from all lists
-    for(let i=0; i<featLi.length; i++) {
-      featLi[i].classList.remove('current');
+    switch(currentUl)
+    {
+      // If no ul is open, assign specified ul as current
+      case null:
+        navUls[navItems.indexOf(item)].classList.add('nav-current');
+        break;
+      // If specified ul is already open, close
+      case navUls[navItems.indexOf(item)]:
+        currentUl.classList.remove('nav-current');
+        break;
+      // By default, remove class name from current ul and assign to specified
+      default:
+        currentUl.classList.remove('nav-current');
+        navUls[navItems.indexOf(item)].classList.add('nav-current');
+        break;
     }
-
-    // Get the list index of button clicked
-    index = featBtns.indexOf(button);
-    // Add 'current' class name to corresponding list
-    featLi[index].classList.add('current');
-  }
+  });
 });
+
+// Billboard page select
+bbBtns.forEach(btn =>
+{
+  btn.addEventListener('click', () =>
+  {
+    // Get current img and btn
+    let currentBtn = document.querySelector('.bb-btn-current');
+    let currentImg = document.querySelector('.bb-img-current');
+    // Reassign current img/btn based on btn index
+    currentBtn.classList.remove('bb-btn-current');
+    currentImg.classList.remove('bb-img-current');
+    btn.classList.add('bb-btn-current');
+    bbImgs[bbBtns.indexOf(btn)].classList.add('bb-img-current');
+  });
+});
+
+// Featured book li toggle
+featBtns.forEach(btn =>
+  {
+    btn.addEventListener('click', () =>
+    {
+      // Get current btn/ul
+      let currentBtn = document.querySelector('.feat-btn-current');
+      let currentUl = document.querySelector('.feat-ul-current');
+      // Reassign current btn/ul based on btn index
+      currentBtn.classList.remove('feat-btn-current');
+      currentUl.classList.remove('feat-ul-current');
+      btn.classList.add('feat-btn-current');
+      featUls[featBtns.indexOf(btn)].classList.add('feat-ul-current');
+    });
+  });
+
+  // Direct to login page if needed
+  
