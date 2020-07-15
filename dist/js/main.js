@@ -101,4 +101,6 @@ featBtns.forEach(btn =>
   });
 
   // Direct to login page if needed
-  
+  // On verify page, check loggedIn bool, if true, direct to specified page (save in local storage?)
+  // If false, direct to login.html page. Once logged in, direct to specified page (local storage)
+  // Perhaps have promt for specific login to showcase password verification?
